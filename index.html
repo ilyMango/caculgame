@@ -403,13 +403,13 @@ var totalTime = 0;
 var questionStartTime = 0;
 var answerLocked = false;
 var timerID = null;
-/* GitHub Pages에서는 Project URL + Publishable Key만 넣습니다. Secret/Service Role Key는 절대 넣지 마세요. */ var SUPABASE_URL="https://crpubjfgapclryvopgbe.supabase.co";
+/* GitHub Pages에서는 Project URL + Publishable Key만 넣습니다. Secret/Service Role Key는 절대 넣지 마세요. */ var SUPABASE_URL="https://supabase.com/dashboard/project/crpubjfgapclryvopgbe";
 var SUPABASE_PUBLISHABLE_KEY="sb_publishable_cFS4rugOnbd7p3Udin8OqA_vDx9rhXi";
 var ONLINE_TABLE="leaderboard";
 var supabaseClient=null;
 var pendingResult=null;
 function onlineConfigured(){
-    return SUPABASE_URL.indexOf("YOUR_")!==0&&SUPABASE_PUBLISHABLE_KEY.indexOf("YOUR_")!==0&&window.supabase&&typeof window.supabase.createClient==="function";
+    return SUPABASE_URL.indexOf("sb_publishable_cFS4rugOnbd7p3Udin8OqA_vDx9rhXi")!==0&&SUPABASE_PUBLISHABLE_KEY.indexOf("sb_publishable_cFS4rugOnbd7p3Udin8OqA_vDx9rhXi")!==0&&window.supabase&&typeof window.supabase.createClient==="function";
 }
 if(onlineConfigured()){
     supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
